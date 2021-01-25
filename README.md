@@ -1,2 +1,2 @@
 # Software Engineering Labs
-## Bennett University
+### Bennett University
