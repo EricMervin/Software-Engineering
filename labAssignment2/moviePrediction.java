@@ -4,15 +4,18 @@ import java.util.Scanner;
 
 public class moviePrediction {
 	public static void main(String[] args) {
-		int[][] trainData = { { 100, 0, 0 }, { 0, 100, 1 }, { 90, 17, 0 }, { 21, 80, 1 } };
+		int[][] trainData = { { 100, 0, 0 },  { 0, 100, 1 }, { 90, 17, 0 }, { 21, 80, 1 } };
 		double[] distanceArray = { 0, 0, 0, 0 };
 
 		double tempX, tempY, tempDob;
 		int positionInt;
 
+		
 		Scanner sc = new Scanner(System.in);
 
 		for (int k = 0; k < 3; k++) {
+			System.out.println("Movie " + (k+1) + ": ");
+			System.out.println("Enter the no. of Action scenes followed by Comedy scenes: ");
 			int usrX = sc.nextInt();
 			int usrY = sc.nextInt();
 			for (int i = 0; i <= 3; i++) {
@@ -38,9 +41,9 @@ public class moviePrediction {
 			}
 
 			if (trainData[positionInt][2] > 0) {
-				System.out.println("Comedy");
+				System.out.println("Movie type: Comedy");
 			} else {
-				System.out.println("Action");
+				System.out.println("Movie type: Action");
 			}
 		}
 		sc.close();
